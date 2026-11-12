@@ -7,4 +7,3 @@ window.contactLinks = () => {
   if (l.github) out.push(["GitHub", l.github]);
   return out;
 };
-document.title = PORTFOLIO.name + " — " + "Portfolio";

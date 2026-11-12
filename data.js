@@ -1,15 +1,15 @@
-// EDIT THIS FILE ONLY — the portfolio page (portfolio.html) reads all its content from here.
+// EDIT THIS FILE ONLY — the portfolio page (index.html) reads all its content from here.
 window.PORTFOLIO = {
   name: "Vijaya Lakshmi R",
   initials: "VL",
   role: "Developer · Data Management Intern",
   tagline: "Building with data and code.",
-  // big rotating line in the hero of portfolio.html:  "Every <word> has a story. I find it."
+  // big rotating line in the hero of index.html:  "Every <word> has a story. I find it."
   headline: { lead: "Every", words: ["dataset", "survey", "spreadsheet", "database", "dashboard"], tail: "has a", accent: "story.", end: "I find it." },
   // "Get in touch" form: messages are delivered to links.email through formsubmit.co (free, no account).
   // The very first message sends an activation email to that inbox — click "Activate" once and it works from then on.
   contactForm: true,
-  skillGroups: {                                                // used by portfolio.html (falls back to "skills")
+  skillGroups: {                                                // used by index.html (falls back to "skills")
     "Languages": ["Python", "R", "SQL", "HTML", "CSS"],
     "Analysis & ML": ["Pandas", "NumPy", "Scikit-learn", "Statistical Analysis", "EDA", "Machine Learning"],
     "Visualisation & BI": ["Power BI", "Excel", "SPSS", "Data Visualization"],

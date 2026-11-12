@@ -425,7 +425,12 @@ form.addEventListener("submit",async e=>{
     msg.className="msg ok";msg.textContent=`Thanks ${name.split(" ")[0]}! Your message is on its way ✓`;form.reset();
     setTimeout(()=>{if(dlg.open)dlg.close()},2600);
   }catch(err){
-    altLinks();msg.className="msg err";msg.textContent="Couldn't send from here — please use one of the options below.";
+    altLinks();msg.className="msg err";
+    // first message on a new form: FormSubmit replies that the form must be activated (owner gets an email)
+    msg.textContent=/activat/i.test(err.message)
+      ?"Almost there — this form is being activated. Please use one of the options below for now."
+      :"Couldn't send from here — please use one of the options below.";
+    console.warn("Contact form:",err.message);
   }finally{sendBtn.disabled=false;sendBtn.innerHTML=sendLabel}
 });
 $("#foot").textContent=`© ${new Date().getFullYear()} ${P.name} · ${P.location}`;
